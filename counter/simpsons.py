@@ -26,7 +26,8 @@ class Integral:
 
 
 if __name__ == '__main__':
-    funcs = [[lambda x: 5 / x, "5/x"], [lambda x: sin(x), "sin(x)"], [lambda x: log(x), "ln(x)"]]
-    for [func, name] in funcs:
-        integral = Integral(func, 0.001, 0, 1)
+
+    funcs = {"5/x": lambda x: 5 / x, "sin(x)": lambda x: sin(x), "ln(x)": lambda x: log(x)}
+    for name in funcs.keys():
+        integral = Integral(funcs[name], 0.001, 0, 1)
         print(f'{name} from {integral.left} to {integral.right} = {integral.calculate()}')
