@@ -75,8 +75,9 @@ if __name__ == '__main__':
             if left > right:
                 left, right = right, left
                 koef = -1
-            if 'ln' in name and left <= 0:
+            if ('ln' in name or 'x^0.4' in name) and left <= 0:
                 print('You cant use that limits. Arg must be > 0.')
+                continue
             if '/x' in name:
                 if left == 0 or right == 0:
                     print('You cant use zero limits.')
