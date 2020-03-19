@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     while True:
         try:
-            chosen = int(input('Type a number of function: ').strip())
+            chosen = int(input('Enter a number of function: ').strip())
         except ValueError:
             continue
         if chosen >= (len(funcs.keys())) or chosen < 0:
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     name = func_names[chosen]
 
     while True:
-        left_right = input('Type left right limits: ').strip().split(" ")
+        left_right = input('Enter left right limits: ').strip().split(" ")
         if len(left_right) != 2:
             print('Incorrect limits format')
             continue
@@ -92,7 +92,7 @@ if __name__ == '__main__':
 
     while True:
         try:
-            limit = float(input('Type error limit: '))
+            limit = float(input('Enter error limit: '))
         except ValueError:
             print("Incorrect values")
             continue
