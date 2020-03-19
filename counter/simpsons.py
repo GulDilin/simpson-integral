@@ -34,7 +34,11 @@ class Integral:
 
 
 if __name__ == '__main__':
-    funcs = {"5/x": lambda x: 5 / x, "sin(x)": lambda x: sin(x), "ln(x)": lambda x: log(x)}
+    funcs = {"5/x": lambda x: 5 / x,
+             "5*sin(x)": lambda x: 5 * sin(x),
+             "ln(x)": lambda x: log(x),
+             "x^3-4x^2+5x": lambda x: x ** 3 - 4 * x ** 2 + 5 * x,
+             "5x^0.4": lambda x: 5 * x ** 0.4}
     print("Choose function:")
     func_names = list(funcs.keys())
     for i in range(len(func_names)):
