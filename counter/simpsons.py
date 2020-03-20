@@ -30,7 +30,7 @@ class Integral:
             e = abs(res - old_res) / 15 if old_res is not None else None
             old_res = res if old_res is None else old_res
             n *= 2
-        return res
+        return res, n
 
 
 if __name__ == '__main__':
@@ -104,4 +104,6 @@ if __name__ == '__main__':
         break
 
     integral = Integral(funcs[name], limit, left, right)
-    print(f'\nIntegral {func_names[chosen]} from {original_left} to {original_right} = {koef * integral.calculate()}')
+    res, n = integral.calculate()
+    print(f'\nIntegral {func_names[chosen]} from {original_left} to {original_right} = {koef * res}')
+    print(f'\nNumber of parts: {n}')
