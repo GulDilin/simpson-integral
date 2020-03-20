@@ -65,8 +65,6 @@ if __name__ == '__main__':
 
     name = list(funcs.keys())[chosen]
 
-
-
     while True:
         left_right = input('Enter left right limits: ').strip().split(" ")
         if len(left_right) != 2:
